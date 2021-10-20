@@ -1,0 +1,3 @@
+function [amp] = getWaveAmp()
+
+end

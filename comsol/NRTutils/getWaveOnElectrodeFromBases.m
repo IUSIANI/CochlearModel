@@ -1,0 +1,3 @@
+function [wave] = getWaveOnElectrodeFromBases()
+
+end

@@ -1,0 +1,24 @@
+# Carpeta imágenes
+/imagenes/
+
+# Carpeta temp
+/temp/
+
+# Carpeta test
+/test/
+
+# Carpeta SUS
+/sus/
+
+# Carpeta python
+/python/
+
+# Modelos mph
+*.mph
+
+# Ficheros el Rundeopt
+nohup.out
+progress.txt
+*.sh
+*.log
+*.asv
