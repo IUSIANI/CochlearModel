@@ -1,6 +1,6 @@
 function [currentDensityAtNeurons, model] = Modo_Electrodo(stimulationCurrent, distanceBetweenNeurons, nNeuronasSimuladas, boundaryRadius, meanMaterialConductivity, arrayPos)
     fprintf('[+] comsol/models/Modo_Electrodo.m >> Solving current density for each neuron during electrode stimulation\n')
-    global mcdf
+    global mcdf mphElectrodo
     
     import com.comsol.model.*
     import com.comsol.model.util.*
@@ -36,14 +36,25 @@ function [currentDensityAtNeurons, model] = Modo_Electrodo(stimulationCurrent, d
     model = Geometry_CreateGeo(model, distanceBetweenNeurons, nNeuronasSimuladas, boundaryRadius);
     model = Material_CreateMaterial(model, meanMaterialConductivity);
     model = Mesh_CreateMesh(model, nNeuronasSimuladas);
-    model = Physics_CreatePhysicsElectrodeMode(model, stimulationCurrent, boundaryRadius);
+ 
+    switch arrayPos
+        case 0.2
+            fprintf("\t[-] Creando física para el electrodo perimodiolar\n")
+            model = Physics_CreatePhysicsElectrodeMode(model, stimulationCurrent, boundaryRadius);
+        case 1
+            fprintf("\t[-] Creando física para el electrodo lateral\n")
+            model = Physics_CreatePhysicsElectrodeModeLateral(model, stimulationCurrent, boundaryRadius);
+        otherwise 
+            fprintf("\t[-] Creando física para el electrodo genérico\n")
+            model = Physics_CreatePhysicsElectrodeMode(model, stimulationCurrent, boundaryRadius);
+    end
 
     model = Study_CreateSolStatic(model);
     %model = Study_CreateSolDinamica(model, 0, 0.02, 0.02);
 
     [currentDensityAtNeurons, model] = Results_CreateResultsElectrodo(model, distanceBetweenNeurons, nNeuronasSimuladas);
 
-    mphName = sprintf('results/models/ElectrodeMode_%s', mcdf{1});
+    mphName = mphElectrodo(arrayPos, mcdf);
     fprintf("\t[-] saving mph model file: \'%s\'\n", mphName)
     mphsave(mphName)
     fprintf("\t[-] \'comsol/models/Modo_Neurona.m' finished successfully.\n\n")

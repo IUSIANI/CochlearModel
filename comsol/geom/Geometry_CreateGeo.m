@@ -277,5 +277,4 @@ function model  = Geometry_CreateGeo(model, distanceBetweenNeurons, numNeurons, 
     model.component('comp1').geom('geom1').run;
     model.component('comp1').geom('geom1').run('fin');
 
-
 end

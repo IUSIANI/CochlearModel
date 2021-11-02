@@ -1,6 +1,7 @@
 function [VNRTOnElectrode, model] = Modo_Neurona(distanceBetweenNeurons, nNeuronasSimuladas, boundaryRadius, meanMaterialConductivity,arrayPos, vpropag)
 
     global membraneCurrentDensityFile membraneCurrentDensityFolder
+    global mcdf mphNeuron
     
     close all
     fprintf('[+] comsol/models/Modo_Neurona.m >> Calculating the electric potential (V) produced by each of simulated VN (Bases)\n')
@@ -66,6 +67,8 @@ function [VNRTOnElectrode, model] = Modo_Neurona(distanceBetweenNeurons, nNeuron
             VNRTOnElectrode{j+6} = V;
         end
         endIt = toc;
+        mphName = mphNeuron(i, arrayPos, mcdf);
+        mphsave(mphName)
         fprintf("\n\n")
     end
     fprintf("[+] \'comsol/models/Modo_Neurona.m' finished successfully. (Elapsed time: %g sec)\n", toc)

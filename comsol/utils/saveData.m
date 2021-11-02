@@ -1,9 +1,9 @@
 fprintf("[+] /comsol/utils/saveData.m >> Saving data\n")
-save(patientwsFiles(patient,electrode, anchorElectrode))
-save(optFiles(patient,electrode, anchorElectrode), 'FVr_x','d','S','w_')
+save(patientwsFiles(patient,electrode, anchorElectrode, arrayPos))
+save(optFiles(patient,electrode, anchorElectrode, arrayPos), 'FVr_x','d','S','w_','W')
 
 %% Prepare data
-[Xsorted, YRealsorted, YSimsorted, I] = sortInterp0(NRT_real_k_Rec_Elect, NRT_real_k_Amplitude, NRTAmplitud, 'linear');
+[Xsorted, YRealsorted, YSimsorted, I] = sortInterp0(NRT_real_k_Rec_Elect, NRT_real_k_Amplitude, NRTAmplitud, anchorElectrode, InterpolationMethod);
 Electrodos = reshape(repmat(Xsorted,length(I_k), 1)', [],1); % Ok
 Intensidad = reshape(repmat(I_k, length(Xsorted),1),[],1); % Ok
 Paciente = repmat(patient,length(Intensidad),1); % Ok
@@ -24,18 +24,11 @@ T = array2table(data);
 T.Properties.VariableNames = {'Electrodos', 'Intensidad','Paciente','Opt','Tipo','NRT_real','NRT_sim','Trained','RM','Anchor'};
 
 if (length(NRT_real_k_Rec_Elect_Select) == length(NRT_real_k_Rec_Elect))
-    writetable(T, patientcsvFiles(patient, electrode, anchorElectrode,'xlsx'))
-    csvwrite(patientcsvFiles(patient, electrode, anchorElectrode,'csv'),data)
-    csvwrite(patientwFiles(patient, electrode, anchorElectrode),w_)
+    writetable(T, patientcsvFiles(patient, electrode, anchorElectrode, arrayPos,'xlsx'))
+    csvwrite(patientcsvFiles(patient, electrode, anchorElectrode,arrayPos,'csv'),data)
+    csvwrite(patientwFiles(patient, electrode, anchorElectrode,arrayPos),w_)
 else
-    writetable(T, patientcsvFiles(patient, electrode, anchorElectrode,'xlsx'))
-    csvwrite(patientcsvFiles(patient, electrode, anchorElectrode,'csv'),data)
-    csvwrite(patientwFiles(patient, electrode, anchorElectrode),w_)
-%     writetable(T,sprintf('resultados/outputs/Paciente_%s_Electrodo_%s_ancla_%s_RM.xlsx',num2str(patiente),...
-%         num2str(electrodo),num2str(anchorElectrode))) % darle una pensada al nombre %s-%s (patiente, opt)
-%     csvwrite(sprintf('results/outputs/Pacient_%s_Electrode_%s_anchor_%s_RM.csv',num2str(patiente),...
-%         num2str(electrodo),num2str(anchorElectrode)),data)
-% 
-%     csvwrite(sprintf('results/outputs/Pacient_%s_Electrode_%s_anchor_%s_weights_RM.csv',num2str(patiente),...
-%          num2str(electrodo),num2str(anchorElectrode)),w_)
+    writetable(T, patientcsvFiles(patient, electrode, anchorElectrode,arrayPos,'xlsx'))
+    csvwrite(patientcsvFiles(patient, electrode, anchorElectrode,arrayPos,'csv'),data)
+    csvwrite(patientwFiles(patient, electrode, anchorElectrode,arrayPos),w_)
 end

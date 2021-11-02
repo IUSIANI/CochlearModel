@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-load('NRT_20_Neurons_11_Electrodes_0_21.mat');
+load('bases/vbases/NRT_43_Neurons_9_Electrodes_0_2_15m_s_default.mat');
 
 
 x=[];
@@ -13,7 +13,7 @@ for i=[-5:5]
     x=[x,i];
     y=[y,sum(getAmpOnElectrodeFromBases(i, V))];
     subplot(11,2,n)
-    plot([-19:19],getAmpOnElectrodeFromBases(i, V))
+    plot([-21:21],getAmpOnElectrodeFromBases(i, V))
     title(["elec ", num2str(i)])
     n=n+2;
 end
