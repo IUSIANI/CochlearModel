@@ -23,4 +23,4 @@ anchorElectrode = 0;  %Anchor commonly 0 or +2
 % DE
 InterpolationMethod = 'linear'; %Only valid if anchorElectrode == 0 options = 'spline','cubic','linear'
 withOptimization = true; % 'true' for optimization 'false' for load params
-warnings = 'on';
+warnings = 'off';

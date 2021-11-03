@@ -10,7 +10,7 @@ hleg = legend(sprintf('I_{3}: %.3f mA',I_k(3)*1e3),sprintf('I_{2}: %.3f mA',I_k(
 htitle = get(hleg,'Title');
 set(htitle,'String','Intensity')
 
-title('global Weights (w_)');
+title('global Weights (w\_)');
 xlabel('# Num Virtual Neuron');
 ylabel('Weigths');
 xlim([-n,n]);

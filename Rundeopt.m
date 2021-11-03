@@ -59,7 +59,7 @@ switch withOptimization
         [w_] = calcW_(d,opt02.S,opt02.W);
     
     case 'Manual'
-        FVr_x = [8.16,209.87,0,702.13];
+        FVr_x = [8.16/2,209.87/2,0,702.13];
         [d, S] = calcDeltas(currentDensityAtNeurons, nNeuronasSimuladas, FVr_x(1), FVr_x(2), FVr_x(3), FVr_x(4), C_k);
         [w_] = calcW_(d,S,W);    
 end
