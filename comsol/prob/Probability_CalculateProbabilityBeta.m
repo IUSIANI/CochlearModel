@@ -1,8 +1,8 @@
 function [probabilityEachNeuronToFire, model]  = Probability_CalculateProbabilityBeta(model, distanceBetweenNeurons, numNeurons, z, w, maxNormJ, C_k)
-    %disp('Calculando probabilidades');
+    %disp('Calculating probabilities');
     model.sol('sol1').updateSolution;
     
-    %Iteramos sobre el numero de neuronas
+    %Iterate on number of neurons
     probabilityEachNeuronToFire = zeros(numNeurons,length(C_k));
     for i=1:numNeurons
         for k=1:length(C_k)

@@ -1,8 +1,8 @@
 fprintf("[+] /comsol/utils/saveData.m >> Saving data\n")
 save(patientwsFiles(patient,electrode, anchorElectrode, arrayPos))
-save(optFiles(patient,electrode, anchorElectrode, arrayPos), 'FVr_x','d','S','w_','W')
+save(optFiles(patient,electrode, anchorElectrode, arrayPos), 'FVr_x','d','S','w_','W','threshold')
 
-%% Prepare data
+%% Prepare data.
 [Xsorted, YRealsorted, YSimsorted, I] = sortInterp0(NRT_real_k_Rec_Elect, NRT_real_k_Amplitude, NRTAmplitud, anchorElectrode, InterpolationMethod);
 Electrodos = reshape(repmat(Xsorted,length(I_k), 1)', [],1); % Ok
 Intensidad = reshape(repmat(I_k, length(Xsorted),1),[],1); % Ok
@@ -22,6 +22,12 @@ Anchor = repmat(anchorElectrode, size(Electrodos));
 data = [Electrodos,Intensidad,Paciente,Opt,Tipo,NRT_real,NRT_sim,Trained,RM,Anchor];
 T = array2table(data);
 T.Properties.VariableNames = {'Electrodos', 'Intensidad','Paciente','Opt','Tipo','NRT_real','NRT_sim','Trained','RM','Anchor'};
+
+
+
+% [~,~,ind]  = intersect(NRT_real_k_Rec_Elect_Select,NRT_real_k_Rec_Elect);
+% res = any(b(~(ismember(1:numel(b),ind))));
+% 
 
 if (length(NRT_real_k_Rec_Elect_Select) == length(NRT_real_k_Rec_Elect))
     writetable(T, patientcsvFiles(patient, electrode, anchorElectrode, arrayPos,'xlsx'))

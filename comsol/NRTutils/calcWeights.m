@@ -1,9 +1,9 @@
 function [W] = calcWeights(anchorElectrode, V)
-    global I_k NRT_Interp_0
+    global I_k
     global NRT_real_k_Rec_Elect_Select NRT_real_k_Amplitude_Select
     global InterpolationMethod
     
-    ampV = getAmpOnElectrodeFromBases(anchorElectrode, V);%;max(VAnchor,[],2)-min(VAnchor,[],2);
+    ampV = getAmpOnElectrodeFromBases(anchorElectrode, V); %;max(VAnchor,[],2)-min(VAnchor,[],2);
     [numNeurons,~] = size(ampV);
 
     %Weigth calculation to interpolate NRT data

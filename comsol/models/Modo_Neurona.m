@@ -19,7 +19,7 @@ function [VNRTOnElectrode, model] = Modo_Neurona(distanceBetweenNeurons, nNeuron
 
     model.comments(['Model\n\n']);
 
-    %Definicion de variables
+    %Definition of variables
     model.param.set('d', '2*10^-6', 'diametro neurona');
     model.param.set('arrayPos', num2str(arrayPos), 'posicion de la guia de electrodos');
     model.param.set('blockElectrodePos', '.45', 'Posicion del bloque de los electrodos');

@@ -1,26 +1,72 @@
-% Patient
+% ======================================================================= %
+%                              Patient
+% ======================================================================= %
 patient = 1;
-electrode = 6; 
-
-% Model
-I_Stimulation=-10^-3; % Corriente de estimulación del electrodo simulado (Amperios)
-distanceBetweenNeurons = 0.21;          %Distancia entre las neuronas simuladas
-boundaryRadius = 20;
-meanMaterialConductivity = 0.3;
-nNeuronasSimuladas = 43;        %Numero Neuronas simuladas DESPUES SE HACE SIMETRIA
-arrayPos = 0.2; % Separación de la guía de electrodos (0.2)   
-vpropag = 15;
-numElectrodes = 9;
-longitudNeurona = 2.738*10^-3;
-
-% Input current File
-membraneCurrentDensityFile = 'default.csv'; % bEIF.csv default.csv
 
 % Electrodes
-activeElectrode = 0;  %Electrodes goes from -4 to 4
-anchorElectrode = 0;  %Anchor commonly 0 or +2
+electrode = 6; % Stimulated Electrode Absolute numeration
+activeElectrode = 0;  % Electrodes goes from -4 to 4. Commonly = 0
+anchorElectrode = 2;  % Anchor commonly 0 or +2
 
-% DE
-InterpolationMethod = 'linear'; %Only valid if anchorElectrode == 0 options = 'spline','cubic','linear'
-withOptimization = true; % 'true' for optimization 'false' for load params
-warnings = 'off';
+
+% ======================================================================= %
+%                             Model Params
+% ======================================================================= %
+% Stimulation current of the simulated electrode (Amperes).
+I_Stimulation=-10^-3; 
+
+% Distance between simulated neurons.
+distanceBetweenNeurons = 0.21;   
+
+% Boundary Radius [mm]
+boundaryRadius = 20;
+
+% Mean Material Conductivity [S/m]
+meanMaterialConductivity = 0.3;
+
+% Number of simulated neurons. [#]
+nNeuronasSimuladas = 43;
+
+% Electrode array position (0.2) [mm].
+arrayPos = 0.2; 
+
+% Propagation velocity [m/s]
+vpropag = 15;
+
+% Number of Electrodes [#]
+numElectrodes = 9;
+
+% Neuron length [mm]
+longitudNeurona = 2.738*10^-3;
+
+
+% ======================================================================= %
+%                          Input current File
+% ======================================================================= %
+membraneCurrentDensityFile = 'default.csv'; % bEIF.csv default.csv
+
+
+% ======================================================================= %
+%                   Differential Evolution Algorithm
+% ======================================================================= %
+% Intermpolation method. options ['spline','cubic','linear']
+% Only valid if anchorElectrode == 0 
+InterpolationMethod = 'linear'; 
+
+% Optimize:
+%  'true' for optimization
+%  'false' for load params
+%   or 'manual' for setting [alpha, beta, jmin, jmax] manual
+withOptimization = true; 
+
+% ======================================================================= %
+%                           Define death region.
+% ======================================================================= %
+numDeadVN = 0;
+
+
+
+
+
+
+

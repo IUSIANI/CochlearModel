@@ -80,6 +80,7 @@
 function [FVr_bestmem,S_bestval,I_nfeval] = deopt(fname,S_struct, Model_struct)
 
 %rng(1,'twister');
+% rng('default');
 
 fprintf('[+] comsol/DE/deopt.m >> Calling diferencial evolution (DE) algorithm.\n')
 %-----This is just for notational convenience and to keep the code uncluttered.--------

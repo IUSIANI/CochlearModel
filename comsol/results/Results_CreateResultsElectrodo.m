@@ -17,7 +17,7 @@ function [currentDensityAtNeurons, model]  = Results_CreateResultsElectrodo(mode
     model.result.dataset('pcN').set('expry', '0.09  + 0.5*(-1.02117 + 0.65725*sqrt(0.01 + 4.12373*(0.355591 - s)^2)+ 0.684478*(0.355591 - s) + 3.787*(0.355591 - s)^2)');
 
 
-    %Iteramos sobre el numero de neuronas
+    %Iterate on number of neurons
     currentDensityAtNeurons = [];
     for i=0:(numNeurons-1)
        model.result.dataset('pcN').set('exprz', num2str(distanceBetweenNeurons*i));

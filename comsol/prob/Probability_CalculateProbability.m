@@ -1,7 +1,7 @@
 function [probabilityEachNeuronToFire, model]  = Probability_CalculateProbability(model, distanceBetweenNeurons, numNeurons, u, sigma)
-    %disp('Calculando probabilidades');
+    %disp('Calculating probabilities');
     % global longitudNeurona
-    %Iteramos sobre el numero de neuronas
+    %Iterate on number of neurons
     probabilityEachNeuronToFire = zeros(numNeurons,length(C_k));
     for i=1:numNeurons
         for k=1:length(C_k)

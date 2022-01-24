@@ -6,12 +6,16 @@
 % F_VTR     "Value To Reach" (stop when ofunc < F_VTR)
 S_struct.F_VTR        = 1.e-30; 
 
+Stol =1e-4; % 
+
+epsilon = 1e-6;
 
 % FVr_minbound,FVr_maxbound   vector of lower and bounds of initial population
 %           the algorithm seems to work especially well if [FVr_minbound,FVr_maxbound] 
 %           covers the region where the global minimum is expected
 %               *** note: these are no bound constraints!! ***
-S_struct.FVr_minbound = [0,    0,    0,  1]; 
+S_struct.bound = 'auto';
+S_struct.FVr_minbound = [epsilon,    epsilon,    0,  1+epsilon]; 
 S_struct.FVr_maxbound = [2000, 2000, 0, 1500];  
 S_struct.I_bnd_constr = 1;  %1: use bounds as bound constraints, 0: no bound constraints      
 
@@ -49,7 +53,7 @@ S_struct.F_CR         = 1;
 %                      Alternates between differential mutation and three-point-
 %                      recombination.           
 
-S_struct.I_strategy   = 4; %probara para las dos poblaciones en las dos estrategias
+S_struct.I_strategy   = 4; %Try for 2 population both strategy
 
 % I_refresh     intermediate output will be produced after "I_refresh"
 %               iterations. No intermediate output will be produced

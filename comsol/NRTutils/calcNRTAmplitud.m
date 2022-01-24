@@ -20,7 +20,7 @@
         end
     end
     
-    %% PRUEBAS
+    %% Test
 %     for m=1:length(NRT_real_k_Rec_Elect)
 %         ampV = getAmpOnElectrodeFromBases(NRT_real_k_Rec_Elect(m), V);
 %         NRTAmplitud2(:,m) = sum(d/S.*W*ampV');

@@ -1,12 +1,12 @@
 function [probabilityEachNeuronToFire, model]  = Probability_CalculateProbabilityBetaFast(model, distanceBetweenNeurons, numNeurons, z, w, maxNormJ, C_k)
     
-    %disp('Calculando probabilidades');
+    %disp('Calculating probabilities');
     %model.sol('sol1').updateSolution;
     
-    %Iteramos sobre el numero de neuronas
+    %Iterate on number of neurons
     probabilityEachNeuronToFire = zeros(numNeurons,length(C_k));
     
-    %Generamos las llamadas a la funcion Beta para cada caso(k) a evaluar 
+    %Generating the calls to Beta function for the case (k) to evaluate.
     eq = {};
     for k=1:length(C_k)
         eq{end+1} = ['betaDist((ec.normJ * ', num2str(C_k(k)),')/', num2str(maxNormJ*2),',', num2str(z),',', num2str(w),')/(2.738*10^-3)'];

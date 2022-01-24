@@ -38,6 +38,7 @@ function model  = Material_CreateMaterial(model, meanMaterialConductivity)
 
     model.component('comp1').material.create('mat9', 'Common');
     model.component('comp1').material('mat9').selection.set([6]);
+    %disp("ojo, se han cambiado las conductividades, antes estaba en 0.2")
     model.component('comp1').material('mat9').label('Hueso entre nervio y escalas');
     model.component('comp1').material('mat9').propertyGroup('def').label(['B' native2unicode(hex2dec({'00' 'e1'}), 'unicode') 'sico']);
     model.component('comp1').material('mat9').propertyGroup('def').set('electricconductivity', {'.2' '0' '0' '0' '.2' '0' '0' '0' '.2'});
