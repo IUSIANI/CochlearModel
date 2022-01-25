@@ -6,10 +6,10 @@
    <img src="https://img.shields.io/github/last-commit/IUSIANI/CochlearModel">
 </div>
 <div>
-   <div><img src="https://img.shields.io/badge/Ubuntu-16.04-orange?logo=ubuntu&color=E95420"></div>
-   <div><img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420"></div>
-   <div><img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB"></div>
-   <div><img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB"></div>
+   <img src="https://img.shields.io/badge/Ubuntu-16.04-orange?logo=ubuntu&color=E95420">
+   <img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420">
+   <img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB">
+   <img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB">
 </div>
 
 
@@ -43,9 +43,9 @@ The next flowchart shows a summary of the model:
 
 ## Prerequisites
 <div>
-   <div><img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420"></div>
-   <div><img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB"></div>
-   <div><img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB"></div>
+   <img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420">
+   <img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB">
+   <img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB">
 </div>
 
 This framework needs COMSOL Multiphysics®, Matlab® and the COMSOL MATLAB api (LiveLink™).
@@ -122,18 +122,18 @@ Ramos, A., Escobar, J., Greiner, D., Rodríguez, E., Oliver, A., Hernández, M.,
  -->
 
 # License 
-<div href="/docs/LICENSE"><img src="https://img.shields.io/badge/read-LICENSE-critical"></div>
+<div href="LICENSE"><img src="https://img.shields.io/badge/read-LICENSE-critical"></div>
 
 Distributed under the MIT License. See ``LICENSE.txt`` for more information.
 
-# Disclaimer
+<!-- # Disclaimer
 <div>
-   <a href="/docs/DISCLAIMER">
+   <a href="DISCLAIMER">
       <img src="https://img.shields.io/badge/read-DISCLAIMER-critical">
    </a>
 </div>
 
-See ``DISCLAIMER.txt`` for more information.
+See ``DISCLAIMER.txt`` for more information. -->
 
 # Acknowledgments
 <div>
