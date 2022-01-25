@@ -9,6 +9,7 @@
 
 # Carpeta temp
 /temp/
+/tmp/
 
 # Carpeta test
 /test/
