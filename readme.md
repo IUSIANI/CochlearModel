@@ -1,15 +1,15 @@
 <!-- Version -->
-<div><img src="https://img.shields.io/badge/version-1.0.0-blue"></div>
+<div><img src="https://img.shields.io/badge/version-0.1.0-blue"></div>
 <!-- Licencia y commits -->
 <div>
    <img src="https://img.shields.io/github/license/IUSIANI/CochlearModel">
    <img src="https://img.shields.io/github/last-commit/IUSIANI/CochlearModel">
 </div>
 <div>
-   <a href=""><img src="https://img.shields.io/badge/Ubuntu-16.04-orange?logo=ubuntu&color=E95420"></a>
-   <a href=""><img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420"></a>
-   <a href=""><img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB"></a>
-   <a href=""><img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB"></a>
+   <div><img src="https://img.shields.io/badge/Ubuntu-16.04-orange?logo=ubuntu&color=E95420"></div>
+   <div><img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420"></div>
+   <div><img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB"></div>
+   <div><img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB"></div>
 </div>
 
 
@@ -43,10 +43,11 @@ The next flowchart shows a summary of the model:
 
 ## Prerequisites
 <div>
-   <a href=""><img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420"></a>
-   <a href=""><img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB"></a>
-   <a href=""><img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB"></a>
+   <div><img src="https://img.shields.io/badge/MATLAB-R2021a-orange?color=E95420"></div>
+   <div><img src="https://img.shields.io/badge/COMSOL-5.6-orange?color=368CCB"></div>
+   <div><img src="https://img.shields.io/badge/LiveLink-COMSOL_5.6-orange?color=368CCB"></div>
 </div>
+
 This framework needs COMSOL Multiphysics®, Matlab® and the COMSOL MATLAB api (LiveLink™).
 The code was tested for the following version of the software aforementioned. 
 
@@ -62,7 +63,6 @@ Clone the repo
 git clone https://github.com/IUSIANI/CochlearModel.git
 ```
 
-or download <a href="www.github.com/IUSIANI/CochlearModel/archive/refs/heads/main.zip">here</a>
 
 ## How to use
 
@@ -85,7 +85,7 @@ The main file is **``Rundeopt.m``**. The initial parameters for the *model* or t
    <a href="https://releases.ubuntu.com/18.04/"><img src="https://img.shields.io/badge/Ubuntu%2018.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"></a>
    <a href="https://ark.intel.com/content/www/es/es/ark/products/198019/intel-core-i910900x-xseries-processor-19-25m-cache-3-70-ghz.html"><img src="https://img.shields.io/badge/Intel-Core_i9--10900X-0071C5?style=for-the-badge&logo=intel&logoColor=white"></a>
    <a  href="https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/productspage/quadro/quadro-desktop/quadro-pascal-p400-data-sheet-us-nv-704503-r1.pdf"><img src="https://img.shields.io/badge/NVIDIA-Quadro P400-76B900?style=for-the-badge&logo=nvidia&logoColor=white"></a>
-   <a  href=""><img src="https://img.shields.io/badge/DRAM-128gb_DDR4-F7B801?style=for-the-badge"></a>
+   <div><img src="https://img.shields.io/badge/DRAM-128gb_DDR4-F7B801?style=for-the-badge"></div>
 </div>
 
 The code was tested over the following conditions:
@@ -122,17 +122,23 @@ Ramos, A., Escobar, J., Greiner, D., Rodríguez, E., Oliver, A., Hernández, M.,
  -->
 
 # License 
-<a href="/docs/LICENSE"><img src="https://img.shields.io/badge/read-LICENSE-critical"></a>
+<div href="/docs/LICENSE"><img src="https://img.shields.io/badge/read-LICENSE-critical"></div>
+
 Distributed under the MIT License. See ``LICENSE.txt`` for more information.
 
 # Disclaimer
-<a href="/docs/DISCLAIMER"><img src="https://img.shields.io/badge/read-DISCLAIMER-critical"></a>
+<div>
+   <a href="/docs/DISCLAIMER">
+      <img src="https://img.shields.io/badge/read-DISCLAIMER-critical">
+   </a>
+</div>
+
 See ``DISCLAIMER.txt`` for more information.
 
 # Acknowledgments
-<a>
+<div>
    <img src="https://img.shields.io/badge/PID-2019--110185RB--C22-red">
    <img src="https://img.shields.io/badge/PROID-PROID2020010022-yellow">
-</a>
+</div>
 
 This work has been supported by Ministerio de Ciencia, Innovación y Universidades, Gobierno de España, grant contract: PID2019-110185RB-C22 and Agencia Canaria de Investigación, Innovación y Sociedad de la Información, Consejería de Economía, Conocimiento y Empleo del Gobierno de Canarias and European Regional Development Funds (ERDF/FEDER), grant contract: PROID2020010022.
