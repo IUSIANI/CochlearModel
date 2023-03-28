@@ -36,7 +36,7 @@ After that, the **differential evolution (DE)** algorithm adjusted the parameter
 
 ### Flowchart
 
-The next flowchart shows a summary of the model:
+The next flowchart shows a summary of the model:<br>
 <img src="docs/src/flowchart.png" title="" alt="flowchart" data-align="center">
 
 # Getting started
