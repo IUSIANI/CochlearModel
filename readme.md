@@ -109,17 +109,26 @@ The code was tested over the following conditions:
 
 - **Total** elapsed time ≈ 1h 30min 
 
-<!-- # Cite as
-Ramos, A., Escobar, J., Greiner, D., Rodríguez, E., Oliver, A., Hernández, M., & Ramos, A. (2022). A phenomenological computational model of the evoked action potential fitted to human cochlear implant responses. *PLOS Computational Biology*.
+# Cite as
+Ramos-de-Miguel, Á., Escobar, J. M., Greiner, D., Benítez, D., Rodríguez, E., Oliver, A., Hernández, M., & Ramos-Macías, Á. (2022). A phenomenological computational model of the evoked action potential fitted to human cochlear implant responses. In W. Nogueira (Ed.), PLOS Computational Biology (Vol. 18, Issue 5, p. e1010134). Public Library of Science (PLoS). https://doi.org/10.1371/journal.pcbi.1010134
 
 #### Bibtex
-
-@article{Ramos2022,
- author = {Ramos, A., Escobar, J.M., Greiner, D., Ben'itez, D., Rodr'iguez, E., Oliver, A., Hern'andez M. Ramos, A.},
- title = {A phenomenological computational model of the evoked action potential fitted to human cochlear implant responses},
- journal = {PLOS Computational Biology},
- year = 2022,}
- -->
+```
+@article{RamosdeMiguel2022,
+  doi = {10.1371/journal.pcbi.1010134},
+  url = {https://doi.org/10.1371/journal.pcbi.1010134},
+  year = {2022},
+  month = may,
+  publisher = {Public Library of Science ({PLoS})},
+  volume = {18},
+  number = {5},
+  pages = {e1010134},
+  author = {{\'{A}}ngel Ramos-de-Miguel and Jos{\'{e}} M. Escobar and David Greiner and Domingo Ben{\'{\i}}tez and Eduardo Rodr{\'{\i}}guez and Albert Oliver and    Marcos Hern{\'{a}}ndez and {\'{A}}ngel Ramos-Mac{\'{\i}}as},
+  editor = {Waldo Nogueira},
+  title = {A phenomenological computational model of the evoked action potential fitted to human cochlear implant responses},
+  journal = {{PLOS} Computational Biology}
+}
+```
 
 # License 
 <div href="LICENSE"><img src="https://img.shields.io/badge/read-LICENSE-critical"></div>
